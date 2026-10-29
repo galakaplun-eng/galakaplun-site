@@ -5,15 +5,21 @@
   function onScroll(){ if(!hero){return;} hd.classList.toggle('solid', window.scrollY > hero.offsetHeight - hd.offsetHeight); }
   onScroll(); addEventListener('scroll', onScroll, {passive:true});
 
+  // hero showreel loops, but pauses while a tile preview is playing
+  var heroV = hero ? hero.querySelector('video') : null;
+  function heroPause(){ if(heroV && !heroV.paused) heroV.pause(); }
+  function heroResume(){ if(heroV && heroV.paused){ var p=heroV.play(); if(p&&p.catch) p.catch(function(){}); } }
+
   // hover previews
   var canHover = matchMedia('(hover:hover)').matches;
   document.querySelectorAll('.tile').forEach(function(t){
     var v=t.querySelector('video'); if(!v||!canHover) return;
     t.addEventListener('mouseenter', function(){
       if(!v.getAttribute('src')){ v.setAttribute('src', v.dataset.src); v.load(); }
+      heroPause();
       var p=v.play(); if(p&&p.then){ p.then(function(){ t.classList.add('playing'); }).catch(function(){}); } else { t.classList.add('playing'); }
     });
-    t.addEventListener('mouseleave', function(){ t.classList.remove('playing'); v.pause(); try{ v.currentTime=0; }catch(e){} });
+    t.addEventListener('mouseleave', function(){ t.classList.remove('playing'); v.pause(); try{ v.currentTime=0; }catch(e){} heroResume(); });
   });
 
   // reveal on scroll
