@@ -66,7 +66,7 @@ PROJECTS = [
 ]
 
 CSS = r"""
-:root{--bg:#e0218a;--ink:#fff;--muted:#ffd6ea;--brick:#993717;--gap:10px;--font-futura:'Jost','Futura',sans-serif;--font-din:'Barlow Condensed','DIN Condensed',sans-serif}
+:root{--bg:#fff;--ink:#000;--muted:#404040;--brick:#993717;--gap:10px;--font-futura:'Jost','Futura',sans-serif;--font-din:'Barlow Condensed','DIN Condensed',sans-serif}
 *{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--font-futura);font-weight:300;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 .wrap{width:min(980px,calc(100% - 32px));margin:0 auto}
@@ -75,8 +75,8 @@ header.site{padding:34px 16px 0;text-align:center}
 header.site .name{font-size:50px;line-height:1.1;font-weight:300;margin:0}
 header.site .tag{font-size:20px;margin:6px 0 0;font-weight:300}
 nav.main{display:flex;justify-content:center;margin-top:22px}
-nav.main a{width:327px;height:55px;line-height:55px;font-size:22px;text-align:center;color:var(--ink);border-left:1px solid rgba(255,255,255,.6)}
-nav.main a:first-child{border-left:0}nav.main a:hover{color:var(--muted)}
+nav.main a{width:327px;height:55px;line-height:55px;font-size:22px;text-align:center;color:#212121;border-left:1px solid #000}
+nav.main a:first-child{border-left:0}nav.main a:hover{color:#777}
 h2.section{font-size:40px;font-weight:300;text-align:center;margin:30px 0 24px}
 .rows{display:flex;flex-direction:column;gap:var(--gap)}
 .row{display:flex;gap:var(--gap)}
@@ -94,11 +94,11 @@ form.contact{width:min(660px,calc(100% - 32px));margin:0 auto;text-align:left;fo
 form.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px}
 form.contact .full{grid-column:1/-1}
 form.contact label{display:block;font-size:14px;margin-bottom:6px;font-weight:400}
-form.contact input,form.contact textarea{width:100%;border:1px solid rgba(255,255,255,.7);border-radius:0;padding:8px 10px;font:inherit;font-size:15px;background:rgba(255,255,255,.06);color:#fff}
+form.contact input,form.contact textarea{width:100%;border:1px solid #000;border-radius:0;padding:8px 10px;font:inherit;font-size:15px;background:#fff}
 form.contact textarea{min-height:84px;resize:vertical}
 form.contact .actions{grid-column:1/-1;display:flex;justify-content:flex-end;margin-top:12px}
-form.contact button{background:#fff;color:var(--bg);border:0;padding:8px 48px;font:inherit;font-size:15px;cursor:pointer}
-form.contact button:hover{background:#ffe3f1}
+form.contact button{background:#000;color:#fff;border:0;padding:8px 48px;font:inherit;font-size:15px;cursor:pointer}
+form.contact button:hover{background:#333}
 .email{font-size:16px;margin-top:38px}
 footer.site{background:var(--brick);color:#fff;text-align:center;font-size:14px;padding:16px 0;margin-top:60px}
 /* project page */
@@ -106,7 +106,7 @@ footer.site{background:var(--brick);color:#fff;text-align:center;font-size:14px;
 .project h1{font-family:var(--font-din);font-weight:600;font-size:50px;line-height:1.1;margin:0 0 20px;letter-spacing:.01em}
 .project h1 a{text-decoration:underline}
 .project .meta{font-size:16px;line-height:1.7;font-weight:400;margin:0}
-.project .meta a{color:var(--muted)}
+.project .meta a{color:#555}
 .player{width:100%;aspect-ratio:16/9;background:#000;margin:40px 0 40px;position:relative}
 .player iframe,.player video{position:absolute;inset:0;width:100%;height:100%;border:0}
 .back{display:flex;justify-content:center;margin:60px 0 0}
