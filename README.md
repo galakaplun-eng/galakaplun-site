@@ -2,14 +2,14 @@
 
 Static rebuild of https://www.galakaplun.com/ (originally a Wix site) as plain HTML/CSS.
 
-- `build.py` — all page content (project list, video sources, gallery layout) and CSS; generates `site/`.
-- `site/` — the built site. `site/assets/img` holds the original Wix media (67 images), `site/assets/video` the four Wix-hosted MP4s.
+- `build.py` — all page content (project list, video sources, gallery layout) and CSS; generates `docs/`.
+- `docs/` — the built site. `docs/assets/img` holds the original Wix media (67 images), `docs/assets/video` the four Wix-hosted MP4s.
 
 ## Run locally
 
 ```
 python3 build.py            # regenerate after editing build.py
-cd site && python3 -m http.server 8000
+cd docs && python3 -m http.server 8000
 ```
 
 Open http://localhost:8000/

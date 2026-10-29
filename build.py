@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Static rebuild of galakaplun.com (Wix) as plain HTML/CSS.
-Run:  python3 build.py   then   cd site && python3 -m http.server 8000
+Run:  python3 build.py   then   cd docs && python3 -m http.server 8000
 """
 import os, html, urllib.parse
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(ROOT, "site")
+OUT = os.path.join(ROOT, "docs")
 
 def img(id_):  # original Wix media ids kept as filenames
     return f"assets/img/9efe7c_{id_}~mv2." + ("png" if id_ in PNG else "jpg")
